@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "ZJnUykz5oWhgCq+YVxGLB/Sha5GuyhYTT2ur1BlLSnk5n+c5611ATalt0VDiebo83MLtsA2ZmZnSh+IfTMsvbQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\asala\\source\\EnProj\\PasswordManager\\PasswordManager.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\asala\\.nuget\\packages\\materialdesigncolors\\1.2.7\\materialdesigncolors.1.2.7.nupkg.sha512",
+    "C:\\Users\\asala\\.nuget\\packages\\materialdesignthemes\\3.2.0\\materialdesignthemes.3.2.0.nupkg.sha512"
+  ],
+  "logs": []
+}
