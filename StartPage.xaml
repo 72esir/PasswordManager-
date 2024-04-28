@@ -26,14 +26,14 @@
                        FontSize="18">
                 </TextBlock>
                 <Grid Opacity="0.5">
-                    <Image Source="C:\Users\asala\start.jpg" Stretch="Fill"/>
+                    <Image Source="/Sources/start.jpg" Stretch="Fill"/>
                 </Grid>
                 <Button Width="170" Height="25"
                         Content="Login"
                         Background="#FFAFEEEE"
                         BorderBrush="#FF5F9EA0"
                         BorderThickness="1"
-                        Margin="7"
+                        Margin="0,25,0,7"
                         Click="Login"
                         Foreground="Black"
                         Padding="0,0,0,3">
@@ -51,7 +51,7 @@
                         Foreground="Black"
                         Padding="0,0,0,3" Click="Logup">
                     <Button.Resources>
-                        <Style TargetType="Border">
+                        <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="10"/>
                         </Style>
                     </Button.Resources>

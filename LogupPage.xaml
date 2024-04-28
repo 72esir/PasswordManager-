@@ -35,7 +35,7 @@
                             FontSize="18">
                 </TextBlock>
                 <Grid Opacity="0.35">
-                    <Image Source="C:\Users\asala\start.jpg" Stretch="Fill"/>
+                    <Image Source="/Sources/start.jpg" Stretch="Fill"/>
                 </Grid>
                 <Grid VerticalAlignment="Bottom">
                     <Button HorizontalAlignment="Left" 
