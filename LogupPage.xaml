@@ -40,7 +40,7 @@
                 <Grid VerticalAlignment="Bottom">
                     <Button HorizontalAlignment="Left" 
                             Height="27" Width="70"
-                            Margin="19,15,0,0"
+                            Margin="20,15,0,0"
                             Content="Back"
                             Background="#FFAFEEEE"
                             BorderBrush="#FF5F9EA0"
