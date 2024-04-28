@@ -13,16 +13,26 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace PasswordManager
+namespace PasswordManeger
 {
     /// <summary>
-    /// Interaction logic for LogInPage.xaml
+    /// Interaction logic for LoginPage.xaml
     /// </summary>
-    public partial class LogInPage : Page
+    public partial class LoginPage : Page
     {
-        public LogInPage()
+        public LoginPage()
         {
             InitializeComponent();
+        }
+
+        private void Back(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new StartPage());
+        }
+
+        private void Continue(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

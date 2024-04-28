@@ -9,7 +9,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace PasswordManager
+namespace PasswordManeger
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -19,7 +19,7 @@ namespace PasswordManager
         public MainWindow()
         {
             InitializeComponent();
-            mainFrame.Content = new StartPage();
+            mainFraim.Content = new StartPage();
         }
     }
 }

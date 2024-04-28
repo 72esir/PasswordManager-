@@ -2,7 +2,7 @@
 using System.Data;
 using System.Windows;
 
-namespace PasswordManager
+namespace PasswordManeger
 {
     /// <summary>
     /// Interaction logic for App.xaml
