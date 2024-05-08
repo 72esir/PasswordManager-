@@ -21,5 +21,7 @@ namespace PasswordManeger
             InitializeComponent();
             mainFraim.Content = new StartPage();
         }
+        private void MouseDown(object sender, MouseButtonEventArgs e) => DragMove();
+
     }
 }

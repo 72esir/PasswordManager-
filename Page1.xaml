@@ -9,7 +9,7 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Page1">
 
-    <Grid Background="#252224"
+    <Grid Background="#0f1f2c"
           Width="500">
         
         <Grid.ColumnDefinitions>
@@ -22,18 +22,30 @@
             <RowDefinition Height="317*"/>
         </Grid.RowDefinitions>
         <Grid Grid.Column="0" Grid.ColumnSpan="3">
-            <Border Height="30" VerticalAlignment="Top"
+            <Border Height="32" VerticalAlignment="Top"
                     BorderBrush="Black" BorderThickness="1"
                     CornerRadius="8 8 0 0">
-                <Button Width="30" HorizontalAlignment="Right" Click="Close"
-                        Background="Aqua"/>
+                <Grid>
+                    <Button Width="28" Height="28" HorizontalAlignment="Right" Click="Close"
+                        BorderBrush="Transparent">
+                        <Button.Background>
+                            <ImageBrush ImageSource="/Sources/off.png" />
+                        </Button.Background>
+                    </Button>
+                    <Button Width="28" Height="28" HorizontalAlignment="Left" Click="Back"
+                            BorderBrush="Transparent" Margin="5,1,0,0" VerticalAlignment="Top">
+                        <Button.Background>
+                            <ImageBrush ImageSource="/Sources/back.png" Stretch="Fill"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
             </Border>
         </Grid>
         <Button Grid.Column="0"
                 Content="My passwords"
-                Background="#434142"
-                BorderBrush="#6c0426"
-                Foreground="#6c0426"
+                Background="#05141a"
+                BorderBrush="Black"
+                Foreground="#911e42"
                 Height="55" Margin="10 0 0 0">
             <Button.Resources>
                 <Style TargetType="Border">
@@ -43,9 +55,9 @@
         </Button>
         <Button Grid.Column="1"
                 Content="Upload password"
-                Background="#434142"
-                BorderBrush="#6c0426"
-                Foreground="#6c0426"
+                Background="#05141a"
+                BorderBrush="Black"
+                Foreground="#911e42"
                 Height="55" Margin="0 0 0 0">
             <Button.Resources>
                 <Style TargetType="Border">
@@ -55,9 +67,9 @@
         </Button>
         <Button Grid.Column="2"
                 Content="New password"
-                Background="#434142"
-                BorderBrush="#6c0426"
-                Foreground="#6c0426"
+                Background="#05141a"
+                BorderBrush="Black"
+                Foreground="#911e42"
                 Height="55" Margin="0 0 10 0">
             <Button.Resources>
                 <Style TargetType="Border">
@@ -65,6 +77,22 @@
                 </Style>
             </Button.Resources>
         </Button>
+        <Border Grid.Column="0" Grid.ColumnSpan="3"
+                BorderBrush="Black" BorderThickness="1"  Margin="0 30"
+                Height="1" VerticalAlignment="Bottom"/>
+        <TextBox x:Name="text"
+                 Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"
+                 Margin="20 0 20 30" Background="Transparent"
+                 BorderBrush="Black" BorderThickness="1"
+                 TextWrapping="WrapWithOverflow" Foreground="AliceBlue"
+                 FontSize="19" Padding="10" TextAlignment="Center">
 
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="Background" Value="#05141a"/>
+                    <Setter Property="CornerRadius" Value="3"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
     </Grid>
 </Page>

@@ -13,38 +13,48 @@
     <Grid>
         <Border Width="250"
         Height="420"
-        Background="AliceBlue"
+        Background="#0f1f2c"
         CornerRadius="10"
         BorderThickness="1"
-        BorderBrush="#FF5F9EA0">
+        BorderBrush="Black">
             <Border.Effect>
                 <DropShadowEffect ShadowDepth="10" BlurRadius="30" Color="Gray"/>
             </Border.Effect>
 
             <StackPanel>
-                <TextBlock Text="Менеджер паролей"
-                           TextAlignment="Center"
-                           Padding="5"
-                           Margin="0,15,0,0"
-                           FontSize="18"
-                           Opacity="0.3">
-                </TextBlock>
+                <Border Height="32" VerticalAlignment="Top"
+                        BorderBrush="Black" BorderThickness="1"
+                        CornerRadius="8 8 0 0">
+                    <Grid>
+                        <Button Width="28" Height="28"
+                                HorizontalAlignment="Right" Click="Close"
+                                BorderBrush="Transparent">
+                            <Button.Background>
+                                <ImageBrush ImageSource="/Sources/off.png" />
+                            </Button.Background>
+                        </Button>
+                    </Grid>
+                </Border>
                 <TextBlock Text="Login"
+                           Height="65"
+                           Background="#05141a"
+                           Foreground="#911e42"
                            TextAlignment="Center"
-                            Padding="5"
-                            Margin="0,10,0,-10"
-                            FontSize="18">
+                           Padding="0 20 0 0"
+                           FontSize="18">
                 </TextBlock>
+                <Border BorderBrush="Black" BorderThickness="1" Height="1"/>
+
                 <Grid Opacity="0.35">
-                    <Image Source="/Sources/start.jpg" Stretch="Fill"/>
+                    <Image Source="/Sources/lock.png" Stretch="Fill" Margin="45,45,45,10"/>
                 </Grid>
                 <Grid VerticalAlignment="Bottom">
                     <Button HorizontalAlignment="Left" Width="70"
                             Margin="20,15,0,0"
                             Content="Back"
-                            Background="#FFAFEEEE"
-                            BorderBrush="#FF5F9EA0"
-                            Foreground="Black" Height="32" VerticalAlignment="Top" 
+                            Background="#05141a"
+                            BorderBrush="Black"
+                            Foreground="#911e42" Height="32" VerticalAlignment="Top" 
                             Click="Back">
                         <Button.Resources>
                             <Style TargetType="Border">
@@ -56,9 +66,9 @@
                             Height="27" Width="70"
                             Margin="0,15,20,0"
                             Content="Continue"
-                            Background="#FFAFEEEE"
-                            BorderBrush="#FF5F9EA0"
-                            Foreground="Black"
+                            Background="#05141a"
+                            BorderBrush="Black"
+                            Foreground="#911e42"
                             Padding="0"
                             Click="Continue">
                         <Button.Resources>
@@ -75,10 +85,9 @@
             <StackPanel VerticalAlignment="Center">
                 <TextBox materialDesign:HintAssist.Hint ="Login"  Style="{StaticResource MaterialDesignFloatingHintTextBox}"
                          x:Name="Log"
-                         
                          HorizontalAlignment="Center"
                          Height="40" Width="200"
-                         Foreground="Black"
+                         Foreground="#911e42"
                          FontWeight="UltraBlack"
                          Padding="5,0,0,-2">
                 </TextBox>
@@ -86,7 +95,7 @@
                          x:Name="Pass"
                          HorizontalAlignment="Center"
                          Height="40" Width="200"
-                         Foreground="Black"
+                         Foreground="#911e42"
                          FontWeight="UltraBlack"
                          Padding="5,0,0,-2"
                          Margin="0">

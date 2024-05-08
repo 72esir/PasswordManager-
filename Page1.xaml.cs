@@ -23,11 +23,17 @@ namespace PasswordManeger
         public Page1()
         {
             InitializeComponent();
+            text.Text = "Welcome to Password Manager!\r\nSecurely store your passwords and easily access them.\r\nA secure and convenient application to store your passwords safely and in one place. Stress and worry free - your credentials are always under control. Ready to manage your passwords securely and conveniently?\r\nLet's get started!";
         }
 
         private void Close(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
+        }     
+
+        private void Back(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Page1());
         }
     }
 }

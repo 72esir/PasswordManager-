@@ -34,5 +34,10 @@ namespace PasswordManeger
         {
 
         }
+
+        private void Close(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
     }
 }

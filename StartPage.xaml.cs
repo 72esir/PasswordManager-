@@ -34,5 +34,10 @@ namespace PasswordManeger
         {
             NavigationService.Navigate(new LogupPage());
         }
+
+        private void Close(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
     }
 }

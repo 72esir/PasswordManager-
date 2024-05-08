@@ -5,37 +5,54 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:PasswordManeger"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="420" d:DesignWidth="250"
       Title="StartPage">
 
     <Grid>
+        
         <Border Width="250"
             Height="420"
-            Background="AliceBlue"
+            Background="#0f1f2c"
             CornerRadius="10"
             BorderThickness="1"
-            BorderBrush="#FF5F9EA0">
+            BorderBrush="Black">
             <Border.Effect>
                 <DropShadowEffect ShadowDepth="10" BlurRadius="30" Color="Gray"/>
             </Border.Effect>
             <StackPanel>
-                <TextBlock Text="Менеджер паролей"
-                       TextAlignment="Center"
-                       Padding="5"
-                       Margin="0,15,0,0"
-                       FontSize="18">
+                <Border Height="32" VerticalAlignment="Top"
+                         BorderBrush="Black" BorderThickness="1"
+                         CornerRadius="8 8 0 0">
+                    <Grid>
+                        <Button Width="28" Height="28"
+                                 HorizontalAlignment="Right" Click="Close"
+                                 BorderBrush="Transparent">
+                            <Button.Background>
+                                <ImageBrush ImageSource="/Sources/off.png" />
+                            </Button.Background>
+                        </Button>
+                    </Grid>
+                </Border>
+                <TextBlock Text="Password Manager"
+                           Background="#05141a"
+                           TextAlignment="Center"
+                           Padding="0 20 0 0"
+                           Margin="0,0,0,0"
+                           FontSize="18"
+                           Foreground="#911e42" Height="65">
                 </TextBlock>
+                <Border BorderBrush="Black" BorderThickness="1" Height="1"/>
                 <Grid Opacity="0.5">
-                    <Image Source="/Sources/start.jpg" Stretch="Fill"/>
+                    <Image Source="/Sources/lock.png" Margin="45,45,45,10" Stretch="Fill"/>
                 </Grid>
                 <Button Width="170" Height="25"
                         Content="Login"
-                        Background="#FFAFEEEE"
-                        BorderBrush="#FF5F9EA0"
+                        Background="#05141a"
+                        BorderBrush="Black"
                         BorderThickness="1"
                         Margin="0,25,0,7"
                         Click="Login"
-                        Foreground="Black"
+                        Foreground="#911e42"
                         Padding="0,0,0,3">
                     <Button.Resources>
                         <Style TargetType="Border">
@@ -45,10 +62,10 @@
                 </Button>
                 <Button Width="170" Height="25"
                         Content="Logup"
-                        Background="#FFAFEEEE"
-                        BorderBrush="#FF5F9EA0"
+                        Background="#05141a"
+                        BorderBrush="Black"
                         BorderThickness="1"
-                        Foreground="Black"
+                        Foreground="#911e42"
                         Padding="0,0,0,3" Click="Logup">
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
@@ -58,5 +75,6 @@
                 </Button>
             </StackPanel>
         </Border>
+       
     </Grid>
 </Page>
