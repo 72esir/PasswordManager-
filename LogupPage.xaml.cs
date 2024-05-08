@@ -30,38 +30,63 @@ namespace PasswordManeger
             string pass = Pass.Password.Trim();
             string rePass = RePass.Password.Trim();
 
-            if (pass.Length < 7 || (!pass.Contains("?") && !pass.Contains("!") && !pass.Contains("*") && !pass.Contains("#")))
+            if ((pass.Length < 7 || (!pass.Contains("?") && !pass.Contains("!") && !pass.Contains("*") && !pass.Contains("#"))) && (pass == rePass) && (login.Length >= 5))
             {
-                Pass.ToolTip = "field is entered incorrectly";
+                Pass.ToolTip = "the password is too short or does not contain special characters (?,!,*) ";
                 Pass.Background = Brushes.LightCoral;
             }
-            else
+            else if ((pass.Length < 7 || (!pass.Contains("?") && !pass.Contains("!") && !pass.Contains("*") && !pass.Contains("#"))) && (pass == rePass) && (login.Length < 5))
             {
-                Pass.ToolTip = "";
-                Pass.Background = Brushes.Transparent;
+                Pass.ToolTip = "the password is too short or does not contain special characters (?,!,*)";
+                Log.ToolTip = "login is too short";
+
+                Pass.Background = Brushes.LightCoral;
+                Log.Background = Brushes.LightCoral;
+            }
+            else if ((pass.Length < 7 || (!pass.Contains("?") && !pass.Contains("!") && !pass.Contains("*") && !pass.Contains("#"))) && (pass != rePass) && (login.Length >= 5))
+            {
+                Pass.ToolTip = "the password is too short or does not contain special characters (?,!,*)";
+                RePass.ToolTip = "retry the password";
+
+                Pass.Background = Brushes.LightCoral;
+                RePass.Background = Brushes.LightCoral;
             }
 
-            if (pass != rePass)
+
+            else if ((pass != rePass) && (pass.Length >= 7 && (pass.Contains("?") || pass.Contains("!") || pass.Contains("*") || !pass.Contains("#"))) && login.Length >= 5)
+            {
+                RePass.ToolTip = "retry the password";
+                RePass.Background = Brushes.LightCoral;
+            }
+            else if ((pass != rePass) && (pass.Length >= 7 && (pass.Contains("?") || pass.Contains("!") || pass.Contains("*") || !pass.Contains("#"))) && login.Length < 5)
             {
                 RePass.ToolTip = "field is entered incorrectly";
                 RePass.Background = Brushes.LightCoral;
+
+                Log.ToolTip = "login is too short";
+                Log.Background = Brushes.LightCoral;
+            }
+
+
+            else if (login.Length < 5 && (pass.Length >= 7 && (pass.Contains("?") || pass.Contains("!") || pass.Contains("*") || pass.Contains("#"))) && (pass == rePass))
+            {
+                Log.ToolTip = "login is too short";
+                Log.Background = Brushes.LightCoral;
             }
             else
             {
                 RePass.ToolTip = "";
                 RePass.Background = Brushes.Transparent;
-            }
-
-            if (login.Length < 5)
-            {
-                Log.ToolTip = "field is entered incorrectly";
-                Log.Background = Brushes.LightCoral;
-            }
-            else
-            {
+                Pass.ToolTip = "";
+                Pass.Background = Brushes.Transparent;
                 Log.ToolTip = "";
                 Log.Background = Brushes.Transparent;
-                
+
+                Window1 win1 = new Window1();
+                win1.Show();
+
+                Window currentWindow = Application.Current.MainWindow;
+                currentWindow.Close();
             }
         }
 

@@ -32,7 +32,11 @@ namespace PasswordManeger
 
         private void Continue(object sender, RoutedEventArgs e)
         {
+            Window1 win1 = new Window1();
+            win1.Show();
 
+            Window currentWindow = Application.Current.MainWindow;
+            currentWindow.Close();
         }
 
         private void Close(object sender, RoutedEventArgs e)
