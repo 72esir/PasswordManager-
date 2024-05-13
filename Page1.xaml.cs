@@ -35,5 +35,15 @@ namespace PasswordManeger
         {
             NavigationService.Navigate(new Page1());
         }
+
+        private void NewPass(object sender, RoutedEventArgs e)
+        {
+           
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new AddPass());
+        }
     }
 }

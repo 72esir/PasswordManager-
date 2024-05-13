@@ -72,7 +72,7 @@ namespace PasswordManeger {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/PasswordManeger;V1.0.0.0;component/loginpage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/PasswordManeger;component/loginpage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\LogInPage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
