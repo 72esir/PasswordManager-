@@ -10,9 +10,11 @@ namespace PasswordManeger
 {
     public partial class AddPass : Page
     {
-        public AddPass()
+        private User currentUser;
+        public AddPass(User user)
         {
             InitializeComponent();
+            currentUser = user;
         }
 
         private void btnOpenFile_Click(object sender, RoutedEventArgs e)
@@ -51,13 +53,67 @@ namespace PasswordManeger
 
         private void Back(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Page1());
+            NavigationService.Navigate(new Page1(currentUser));
         }
 
         private void Close(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
         }
+        private void addingToDb(object sender, RoutedEventArgs e)
+        {
+            // Проверка, выбран ли хотя бы один пароль из DataGrid
+            if (dataGrid.ItemsSource != null)
+            {
+                var csvData = (List<CsvRow>)dataGrid.ItemsSource;
+                int duplicatesCount = 0;
+
+                using (var context = new AppContext())
+                {
+                    foreach (var selectedPassword in csvData)
+                    {
+                        // Проверка на дубликат
+                        bool isDuplicate = context.PasswordEntries.Any(p =>
+                            p.UserId == currentUser.Id &&
+                            p.Url == selectedPassword.Url &&
+                            p.Username == selectedPassword.Username);
+
+                        if (!isDuplicate)
+                        {
+                            var newPasswordEntry = new PasswordEntry
+                            {
+                                UserId = currentUser.Id,
+                                Url = selectedPassword.Url,
+                                Username = selectedPassword.Username,
+                                Password = selectedPassword.Password,
+                                Comment = selectedPassword.Comment,
+                                Tags = selectedPassword.Tags
+                            };
+
+                            context.PasswordEntries.Add(newPasswordEntry);
+                        }
+                        else
+                        {
+                            duplicatesCount++;
+                        }
+                    }
+                    context.SaveChanges();
+                }
+
+                string message = $"Добавлено {csvData.Count - duplicatesCount} паролей.";
+                if (duplicatesCount > 0)
+                {
+                    message += $"\n{duplicatesCount} дубликатов пропущено.";
+                }
+                MessageBox.Show(message);
+                NavigationService.Navigate(new Page2(currentUser));
+            }
+            else
+            {
+                MessageBox.Show("Список паролей пуст.");
+            }
+
+        } 
     }
 
     public class CsvRow

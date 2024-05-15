@@ -19,11 +19,15 @@ namespace PasswordManeger
     /// </summary>
     public partial class Window1 : Window
     {
-        
-        public Window1()
+
+        private User currentUser;
+
+        // Конструктор с параметром для получения пользователя
+        public Window1(User user)
         {
             InitializeComponent();
-            Fraim.Content = new Page1();
+            currentUser = user;
+            Fraim.Content = new Page1(currentUser); // Передаем пользователя в Page1
         }
         private void MouseDown(object sender, MouseButtonEventArgs e) => DragMove();
     }

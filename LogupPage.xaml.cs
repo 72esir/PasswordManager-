@@ -75,8 +75,8 @@ namespace PasswordManeger
             }
             else
             {
-                SaveAccToDatabase(login,pass);
-
+                User newUser = SaveAccToDatabase(login, pass);
+                
                 RePass.ToolTip = "";
                 RePass.Background = Brushes.Transparent;
                 Pass.ToolTip = "";
@@ -84,19 +84,21 @@ namespace PasswordManeger
                 Log.ToolTip = "";
                 Log.Background = Brushes.Transparent;
 
-                Window1 win1 = new Window1();
+                Window1 win1 = new Window1(newUser);
                 win1.Show();
 
                 Window currentWindow = Application.Current.MainWindow;
                 currentWindow.Close();
             }
         }
-        private void SaveAccToDatabase(string login,string pass)
+        private User SaveAccToDatabase(string login,string pass)
         {
             using (var context = new AppContext())
             {
-                context.Users.Add(new User { Login = login, Password = pass});
+                var newUser = new User { Login = login, Password = pass };
+                context.Users.Add(newUser);
                 context.SaveChanges();
+                return newUser; // Возвращаем созданного пользователя
             }
         }
         private void Button_Click(object sender, RoutedEventArgs e)

@@ -20,9 +20,11 @@ namespace PasswordManeger
     /// </summary>
     public partial class Page1 : Page
     {
-        public Page1()
+        private User currentUser;
+        public Page1(User user)
         {
             InitializeComponent();
+            currentUser = user;
             text.Text = "Welcome to Password Manager!\r\nSecurely store your passwords and easily access them.\r\nA secure and convenient application to store your passwords safely and in one place. Stress and worry free - your credentials are always under control. Ready to manage your passwords securely and conveniently?\r\nLet's get started!";
         }
 
@@ -39,12 +41,12 @@ namespace PasswordManeger
 
         private void Upload_Pass(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new AddPass());
+            NavigationService.Navigate(new AddPass(currentUser)); // Передаем пользователя в AddPass
         }
 
         private void My_pass(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Page2());
+            NavigationService.Navigate(new Page2(currentUser));
         }
     }
 }

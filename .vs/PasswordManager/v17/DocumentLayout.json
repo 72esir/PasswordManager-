@@ -3,12 +3,52 @@
   "WorkspaceRootPath": "C:\\Users\\dreea\\Desktop\\\u041F\u0440\u043E\u0435\u043A\u0442\\Projectpass\\PasswordManager-\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C1C24EA0-8868-46CE-99A5-70EE61A249FB}|PasswordManager.csproj|c:\\users\\dreea\\desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\\projectpass\\passwordmanager-\\addpass.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1C24EA0-8868-46CE-99A5-70EE61A249FB}|PasswordManager.csproj|solutionrelative:addpass.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1C24EA0-8868-46CE-99A5-70EE61A249FB}|PasswordManager.csproj|c:\\users\\dreea\\desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\\projectpass\\passwordmanager-\\addpass.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{C1C24EA0-8868-46CE-99A5-70EE61A249FB}|PasswordManager.csproj|solutionrelative:addpass.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1C24EA0-8868-46CE-99A5-70EE61A249FB}|PasswordManager.csproj|c:\\users\\dreea\\desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\\projectpass\\passwordmanager-\\page2.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1C24EA0-8868-46CE-99A5-70EE61A249FB}|PasswordManager.csproj|solutionrelative:page2.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C1C24EA0-8868-46CE-99A5-70EE61A249FB}|PasswordManager.csproj|c:\\users\\dreea\\desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\\projectpass\\passwordmanager-\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C1C24EA0-8868-46CE-99A5-70EE61A249FB}|PasswordManager.csproj|solutionrelative:loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{C1C24EA0-8868-46CE-99A5-70EE61A249FB}|PasswordManager.csproj|c:\\users\\dreea\\desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\\projectpass\\passwordmanager-\\page2.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{C1C24EA0-8868-46CE-99A5-70EE61A249FB}|PasswordManager.csproj|solutionrelative:page2.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1C24EA0-8868-46CE-99A5-70EE61A249FB}|PasswordManager.csproj|c:\\users\\dreea\\desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\\projectpass\\passwordmanager-\\page1.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1C24EA0-8868-46CE-99A5-70EE61A249FB}|PasswordManager.csproj|solutionrelative:page1.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1C24EA0-8868-46CE-99A5-70EE61A249FB}|PasswordManager.csproj|c:\\users\\dreea\\desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\\projectpass\\passwordmanager-\\appcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1C24EA0-8868-46CE-99A5-70EE61A249FB}|PasswordManager.csproj|solutionrelative:appcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C1C24EA0-8868-46CE-99A5-70EE61A249FB}|PasswordManager.csproj|c:\\users\\dreea\\desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\\projectpass\\passwordmanager-\\loguppage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C1C24EA0-8868-46CE-99A5-70EE61A249FB}|PasswordManager.csproj|solutionrelative:loguppage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1C24EA0-8868-46CE-99A5-70EE61A249FB}|PasswordManager.csproj|c:\\users\\dreea\\desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\\projectpass\\passwordmanager-\\window1.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1C24EA0-8868-46CE-99A5-70EE61A249FB}|PasswordManager.csproj|solutionrelative:window1.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1C24EA0-8868-46CE-99A5-70EE61A249FB}|PasswordManager.csproj|c:\\users\\dreea\\desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\\projectpass\\passwordmanager-\\passwordentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1C24EA0-8868-46CE-99A5-70EE61A249FB}|PasswordManager.csproj|solutionrelative:passwordentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1C24EA0-8868-46CE-99A5-70EE61A249FB}|PasswordManager.csproj|c:\\users\\dreea\\desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\\projectpass\\passwordmanager-\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1C24EA0-8868-46CE-99A5-70EE61A249FB}|PasswordManager.csproj|solutionrelative:user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1C24EA0-8868-46CE-99A5-70EE61A249FB}|PasswordManager.csproj|c:\\users\\dreea\\desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\\projectpass\\passwordmanager-\\newpasswin.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{C1C24EA0-8868-46CE-99A5-70EE61A249FB}|PasswordManager.csproj|solutionrelative:newpasswin.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C1C24EA0-8868-46CE-99A5-70EE61A249FB}|PasswordManager.csproj|c:\\users\\dreea\\desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\\projectpass\\passwordmanager-\\loguppage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -26,57 +66,182 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Page1.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\dreea\\Desktop\\\u041F\u0440\u043E\u0435\u043A\u0442\\Projectpass\\PasswordManager-\\Page1.xaml.cs",
+              "RelativeDocumentMoniker": "Page1.xaml.cs",
+              "ToolTip": "C:\\Users\\dreea\\Desktop\\\u041F\u0440\u043E\u0435\u043A\u0442\\Projectpass\\PasswordManager-\\Page1.xaml.cs",
+              "RelativeToolTip": "Page1.xaml.cs",
+              "ViewState": "AQIAACYAAAAAAAAAAAAswDAAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T12:53:02.609Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Window1.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\dreea\\Desktop\\\u041F\u0440\u043E\u0435\u043A\u0442\\Projectpass\\PasswordManager-\\Window1.xaml.cs",
+              "RelativeDocumentMoniker": "Window1.xaml.cs",
+              "ToolTip": "C:\\Users\\dreea\\Desktop\\\u041F\u0440\u043E\u0435\u043A\u0442\\Projectpass\\PasswordManager-\\Window1.xaml.cs",
+              "RelativeToolTip": "Window1.xaml.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAB4AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T12:52:37.201Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AppContext.cs",
+              "DocumentMoniker": "C:\\Users\\dreea\\Desktop\\\u041F\u0440\u043E\u0435\u043A\u0442\\Projectpass\\PasswordManager-\\AppContext.cs",
+              "RelativeDocumentMoniker": "AppContext.cs",
+              "ToolTip": "C:\\Users\\dreea\\Desktop\\\u041F\u0440\u043E\u0435\u043A\u0442\\Projectpass\\PasswordManager-\\AppContext.cs",
+              "RelativeToolTip": "AppContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T12:48:29.526Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "PasswordEntry.cs",
+              "DocumentMoniker": "C:\\Users\\dreea\\Desktop\\\u041F\u0440\u043E\u0435\u043A\u0442\\Projectpass\\PasswordManager-\\PasswordEntry.cs",
+              "RelativeDocumentMoniker": "PasswordEntry.cs",
+              "ToolTip": "C:\\Users\\dreea\\Desktop\\\u041F\u0440\u043E\u0435\u043A\u0442\\Projectpass\\PasswordManager-\\PasswordEntry.cs",
+              "RelativeToolTip": "PasswordEntry.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T12:47:37.793Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\dreea\\Desktop\\\u041F\u0440\u043E\u0435\u043A\u0442\\Projectpass\\PasswordManager-\\User.cs",
+              "RelativeDocumentMoniker": "User.cs",
+              "ToolTip": "C:\\Users\\dreea\\Desktop\\\u041F\u0440\u043E\u0435\u043A\u0442\\Projectpass\\PasswordManager-\\User.cs",
+              "RelativeToolTip": "User.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAABdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T12:47:10.836Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "AddPass.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\dreea\\Desktop\\\u041F\u0440\u043E\u0435\u043A\u0442\\Projectpass\\PasswordManager-\\AddPass.xaml.cs",
+              "RelativeDocumentMoniker": "AddPass.xaml.cs",
+              "ToolTip": "C:\\Users\\dreea\\Desktop\\\u041F\u0440\u043E\u0435\u043A\u0442\\Projectpass\\PasswordManager-\\AddPass.xaml.cs",
+              "RelativeToolTip": "AddPass.xaml.cs",
+              "ViewState": "AQIAAFoAAAAAAAAAAAAQwGwAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T12:41:35.236Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AddPass.xaml",
+              "DocumentMoniker": "C:\\Users\\dreea\\Desktop\\\u041F\u0440\u043E\u0435\u043A\u0442\\Projectpass\\PasswordManager-\\AddPass.xaml",
+              "RelativeDocumentMoniker": "AddPass.xaml",
+              "ToolTip": "C:\\Users\\dreea\\Desktop\\\u041F\u0440\u043E\u0435\u043A\u0442\\Projectpass\\PasswordManager-\\AddPass.xaml",
+              "RelativeToolTip": "AddPass.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-15T12:41:44.517Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "NewPassWin.xaml",
+              "DocumentMoniker": "C:\\Users\\dreea\\Desktop\\\u041F\u0440\u043E\u0435\u043A\u0442\\Projectpass\\PasswordManager-\\NewPassWin.xaml",
+              "RelativeDocumentMoniker": "NewPassWin.xaml",
+              "ToolTip": "C:\\Users\\dreea\\Desktop\\\u041F\u0440\u043E\u0435\u043A\u0442\\Projectpass\\PasswordManager-\\NewPassWin.xaml",
+              "RelativeToolTip": "NewPassWin.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-15T12:41:25.939Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Page2.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\dreea\\Desktop\\\u041F\u0440\u043E\u0435\u043A\u0442\\Projectpass\\PasswordManager-\\Page2.xaml.cs",
+              "RelativeDocumentMoniker": "Page2.xaml.cs",
+              "ToolTip": "C:\\Users\\dreea\\Desktop\\\u041F\u0440\u043E\u0435\u043A\u0442\\Projectpass\\PasswordManager-\\Page2.xaml.cs",
+              "RelativeToolTip": "Page2.xaml.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAswB0AAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T12:02:48.489Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Page2.xaml",
+              "DocumentMoniker": "C:\\Users\\dreea\\Desktop\\\u041F\u0440\u043E\u0435\u043A\u0442\\Projectpass\\PasswordManager-\\Page2.xaml",
+              "RelativeDocumentMoniker": "Page2.xaml",
+              "ToolTip": "C:\\Users\\dreea\\Desktop\\\u041F\u0440\u043E\u0435\u043A\u0442\\Projectpass\\PasswordManager-\\Page2.xaml",
+              "RelativeToolTip": "Page2.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-15T12:02:43.964Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "LogInPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\dreea\\Desktop\\\u041F\u0440\u043E\u0435\u043A\u0442\\Projectpass\\PasswordManager-\\LogInPage.xaml.cs",
               "RelativeDocumentMoniker": "LogInPage.xaml.cs",
               "ToolTip": "C:\\Users\\dreea\\Desktop\\\u041F\u0440\u043E\u0435\u043A\u0442\\Projectpass\\PasswordManager-\\LogInPage.xaml.cs",
               "RelativeToolTip": "LogInPage.xaml.cs",
-              "ViewState": "AQIAACoAAAAAAAAAAAAAAE0AAAA+AAAA",
+              "ViewState": "AQIAADkAAAAAAAAAAAAAAEwAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-15T11:40:53.337Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "LogupPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\dreea\\Desktop\\\u041F\u0440\u043E\u0435\u043A\u0442\\Projectpass\\PasswordManager-\\LogupPage.xaml.cs",
               "RelativeDocumentMoniker": "LogupPage.xaml.cs",
               "ToolTip": "C:\\Users\\dreea\\Desktop\\\u041F\u0440\u043E\u0435\u043A\u0442\\Projectpass\\PasswordManager-\\LogupPage.xaml.cs",
               "RelativeToolTip": "LogupPage.xaml.cs",
-              "ViewState": "AQIAAEsAAAAAAAAAAAAowF8AAAAxAAAA",
+              "ViewState": "AQIAAEUAAAAAAAAAAAAUwGQAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-15T11:40:51.591Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 13,
               "Title": "LogInPage.xaml",
               "DocumentMoniker": "C:\\Users\\dreea\\Desktop\\\u041F\u0440\u043E\u0435\u043A\u0442\\Projectpass\\PasswordManager-\\LogInPage.xaml",
               "RelativeDocumentMoniker": "LogInPage.xaml",
               "ToolTip": "C:\\Users\\dreea\\Desktop\\\u041F\u0440\u043E\u0435\u043A\u0442\\Projectpass\\PasswordManager-\\LogInPage.xaml",
               "RelativeToolTip": "LogInPage.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-15T11:40:49.458Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-15T11:40:49.458Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 12,
               "Title": "LogupPage.xaml",
               "DocumentMoniker": "C:\\Users\\dreea\\Desktop\\\u041F\u0440\u043E\u0435\u043A\u0442\\Projectpass\\PasswordManager-\\LogupPage.xaml",
               "RelativeDocumentMoniker": "LogupPage.xaml",
               "ToolTip": "C:\\Users\\dreea\\Desktop\\\u041F\u0440\u043E\u0435\u043A\u0442\\Projectpass\\PasswordManager-\\LogupPage.xaml",
               "RelativeToolTip": "LogupPage.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-15T11:40:48.525Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-15T11:40:48.525Z"
             }
           ]
         },

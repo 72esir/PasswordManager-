@@ -13,5 +13,6 @@ namespace PasswordManeger
         public string Login { get; set; }
         public string Password { get; set; }
 
+        public List<PasswordEntry> PasswordEntries { get; set; } = new List<PasswordEntry>();
     }
 }

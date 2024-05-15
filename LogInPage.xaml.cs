@@ -69,7 +69,7 @@ namespace PasswordManeger
 
                 if (authUser != null)
                 {
-                    Window1 win1 = new Window1();
+                    Window1 win1 = new Window1(authUser);
                     win1.Show();
                     Window currentWindow = Application.Current.MainWindow;
                     currentWindow.Close();

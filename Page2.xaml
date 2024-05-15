@@ -74,12 +74,14 @@
         <Border Grid.Column="0" Grid.ColumnSpan="3"
                 BorderBrush="Black" BorderThickness="1"  Margin="0 30"
                 Height="1" VerticalAlignment="Bottom"/>
-        <DataGrid Grid.Row="2" 
-                  Grid.ColumnSpan="3" 
-                  Margin="10" 
-                  Background="#3e5159" 
-                  Foreground="White">
-            
+        <DataGrid x:Name="dataGrid1" Grid.Row="2" Grid.ColumnSpan="3" Margin="10" Background="#3e5159" Foreground="White" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="URL" Binding="{Binding Url}" />
+                <DataGridTextColumn Header="Username" Binding="{Binding Username}" />
+                <DataGridTextColumn Header="Password" Binding="{Binding Password}" />
+                <DataGridTextColumn Header="Comment" Binding="{Binding Comment}" />
+                <DataGridTextColumn Header="Tags" Binding="{Binding Tags}" />
+            </DataGrid.Columns>
         </DataGrid>
     </Grid>
 </Page>
