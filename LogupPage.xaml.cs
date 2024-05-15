@@ -75,7 +75,7 @@ namespace PasswordManeger
             }
             else
             {
-                SaveLoginToDatabase(login);
+                SaveLoginToDatabase(login,pass);
 
                 RePass.ToolTip = "";
                 RePass.Background = Brushes.Transparent;
@@ -91,11 +91,11 @@ namespace PasswordManeger
                 currentWindow.Close();
             }
         }
-        private void SaveLoginToDatabase(string login)
+        private void SaveLoginToDatabase(string login,string pass)
         {
             using (var context = new AppContext())
             {
-                context.Users.Add(new User { Login = login });
+                context.Users.Add(new User { Login = login, Password = pass});
                 context.SaveChanges();
             }
         }
