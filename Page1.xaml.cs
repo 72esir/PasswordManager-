@@ -31,19 +31,20 @@ namespace PasswordManeger
             Application.Current.Shutdown();
         }     
 
-        private void Back(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new Page1());
-        }
 
         private void NewPass(object sender, RoutedEventArgs e)
         {
            
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Upload_Pass(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new AddPass());
+        }
+
+        private void My_pass(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Page2());
         }
     }
 }

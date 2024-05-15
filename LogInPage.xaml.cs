@@ -32,11 +32,53 @@ namespace PasswordManeger
 
         private void Continue(object sender, RoutedEventArgs e)
         {
-            Window1 win1 = new Window1();
-            win1.Show();
+            string login = Log.Text.Trim();
+            string pass = Pass.Password.Trim();
+           
 
-            Window currentWindow = Application.Current.MainWindow;
-            currentWindow.Close();
+            if ((pass.Length < 7 || (!pass.Contains("?") && !pass.Contains("!") && !pass.Contains("*") && !pass.Contains("#"))) && (login.Length >= 5))
+            {
+                Pass.ToolTip = "the password is too short or does not contain special characters (?,!,*) ";
+                Pass.Background = Brushes.LightCoral;
+            }
+            else if ((pass.Length < 7 || (!pass.Contains("?") && !pass.Contains("!") && !pass.Contains("*") && !pass.Contains("#"))) && (login.Length < 5))
+            {
+                Pass.ToolTip = "the password is too short or does not contain special characters (?,!,*)";
+                Log.ToolTip = "login is too short";
+
+                Pass.Background = Brushes.LightCoral;
+                Log.Background = Brushes.LightCoral;
+            }
+            else if ((pass.Length < 7 || (!pass.Contains("?") && !pass.Contains("!") && !pass.Contains("*") && !pass.Contains("#")))  && (login.Length >= 5))
+            {
+                Pass.ToolTip = "the password is too short or does not contain special characters (?,!,*)";
+                Pass.Background = Brushes.LightCoral;
+            }
+            else
+            {
+                Pass.ToolTip = "";
+                Pass.Background = Brushes.Transparent;
+                Log.ToolTip = "";
+                Log.Background = Brushes.Transparent;
+
+                User authUser = null;
+                using (AppContext context = new AppContext())
+                {
+                    authUser = context.Users.Where(user => user.Login==login && user.Password == pass).FirstOrDefault();
+                }
+
+                if (authUser != null)
+                {
+                    Window1 win1 = new Window1();
+                    win1.Show();
+                    Window currentWindow = Application.Current.MainWindow;
+                    currentWindow.Close();
+                }
+                else
+                    MessageBox.Show("Пользователь не найден");
+            }
+
+           
         }
 
         private void Close(object sender, RoutedEventArgs e)

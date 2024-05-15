@@ -40,6 +40,7 @@ namespace PasswordManeger
                         .ToList();
 
                     dataGrid.ItemsSource = csvData;
+                    
                 }
                 catch (Exception ex)
                 {

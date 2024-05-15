@@ -51,10 +51,8 @@
                     Foreground="#911e42"
                     Background="#05141a"
                     BorderBrush="Black"/>
-            <DataGrid x:Name="dataGrid" 
-                      Grid.Row="1" 
-                      Margin="10" 
-                      Height="290"/>
+            <DataGrid x:Name="dataGrid" Grid.Row="1" Margin="10" Height="290" Background="#3e5159" Foreground="White"></DataGrid>
+
             <Button Content="Save passwords"
                     Click="btnOpenFile_Click" 
                     Margin="10"

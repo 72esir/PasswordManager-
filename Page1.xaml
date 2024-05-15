@@ -32,12 +32,6 @@
                             <ImageBrush ImageSource="/Sources/off.png" />
                         </Button.Background>
                     </Button>
-                    <Button Width="28" Height="28" HorizontalAlignment="Left" Click="Back"
-                            BorderBrush="Transparent" Margin="5,1,0,0" VerticalAlignment="Top">
-                        <Button.Background>
-                            <ImageBrush ImageSource="/Sources/back.png" Stretch="Fill"/>
-                        </Button.Background>
-                    </Button>
                 </Grid>
             </Border>
         </Grid>
@@ -46,7 +40,7 @@
                 Background="#05141a"
                 BorderBrush="Black"
                 Foreground="#911e42"
-                Height="55" Margin="10 0 0 0">
+                Height="55" Margin="10 0 0 0" Click="My_pass">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="5"/>
@@ -58,7 +52,7 @@
                 Background="#05141a"
                 BorderBrush="Black"
                 Foreground="#911e42"
-                Height="55" Margin="0 0 0 0" Click="Button_Click">
+                Height="55" Margin="0 0 0 0" Click="Upload_Pass">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="0"/>

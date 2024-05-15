@@ -23,6 +23,27 @@ namespace PasswordManeger
         public Page2()
         {
             InitializeComponent();
+            
         }
+
+        private void Close(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
+        private void Upload_Pass(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new AddPass());
+        }
+
+        private void NewPass(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void My_pass(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Page2());
+        }
+
     }
 }
