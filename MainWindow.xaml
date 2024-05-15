@@ -15,7 +15,7 @@
             <Grid Clip="{Binding ElementName=rect, Path=RenderedGeometry}">
                 <Rectangle x:Name="rect" RadiusX="10" RadiusY="10" Visibility="Hidden"/>
                 <Grid Background="Transparent">
-                    <Frame x:Name="mainFraim" NavigationUIVisibility="Hidden"/>
+                    <Frame x:Name="mainFrame" NavigationUIVisibility="Hidden"/>
                 </Grid>
             </Grid>
         </Border>
