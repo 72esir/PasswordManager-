@@ -18,7 +18,7 @@
                 <Border Height="32" 
                         VerticalAlignment="Top"
                         BorderBrush="Black" 
-                        BorderThickness="1"
+                        BorderThickness="0 0 0 1"
                         CornerRadius="8 8 0 0">
                     <Grid>
                         <Button Width="28" 

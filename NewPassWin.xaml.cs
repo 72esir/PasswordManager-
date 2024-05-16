@@ -23,5 +23,11 @@ namespace PasswordManeger
         {
             InitializeComponent();
         }
+        private void MouseDown(object sender, MouseButtonEventArgs e) => DragMove();
+
+        private void Back(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

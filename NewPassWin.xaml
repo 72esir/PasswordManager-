@@ -4,9 +4,42 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PasswordManeger"
+        WindowStyle="None" AllowsTransparency="True"
+        Background="Transparent" ResizeMode="NoResize"
         mc:Ignorable="d"
-        Title="NewPassWin" Height="450" Width="800">
-    <Grid>
-        
+        Title="NewPassWin" Height="350" Width="400">
+    <Window.Clip>
+        <RectangleGeometry Rect="0,0,400,350" RadiusX="15" RadiusY="15"/>
+    </Window.Clip>
+
+    <Grid MouseDown="MouseDown"
+              Background="#0f1f2c">
+        <Border Width="400" 
+                Height="350"
+                CornerRadius="15"
+                BorderThickness="1"
+                BorderBrush="Black"/>
+        <StackPanel>
+            <Border Height="32" 
+                        VerticalAlignment="Top"
+                        BorderBrush="Transparent" 
+                        BorderThickness="0 0 0 1"
+                        CornerRadius="8 8 0 0">
+                <Grid>
+                    <Button Width="28" 
+                                Height="28" 
+                                HorizontalAlignment="Left" 
+                                Click="Back"
+                                BorderBrush="Transparent"
+                                Margin="5 3 0 0">
+                        <Button.Background>
+                            <ImageBrush ImageSource="/Sources/back.png" />
+                        </Button.Background>
+                    </Button>
+                </Grid>
+            </Border>
+            <Border BorderBrush="Black"
+                    BorderThickness="1"/>
+        </StackPanel>
     </Grid>
 </Window>

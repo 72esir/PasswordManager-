@@ -46,7 +46,8 @@ namespace PasswordManeger
 
         private void NewPass(object sender, RoutedEventArgs e)
         {
-
+            var newPassWindow = new NewPassWin();
+            newPassWindow.ShowDialog();
         }
         private void My_pass(object sender, RoutedEventArgs e)
         {

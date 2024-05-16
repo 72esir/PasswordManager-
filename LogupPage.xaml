@@ -16,18 +16,14 @@
         CornerRadius="10"
         BorderThickness="1"
         BorderBrush="Black">
-            <Border.Effect>
-                <DropShadowEffect ShadowDepth="10" BlurRadius="30" Color="Gray"/>
-            </Border.Effect>
-
             <StackPanel>
                 <Border Height="32" VerticalAlignment="Top"
-                        BorderBrush="Black" BorderThickness="1"
+                        BorderBrush="Black" BorderThickness="0 0 0 1"
                         CornerRadius="8 8 0 0">
                     <Grid>
                         <Button Width="28" Height="28"
-                 HorizontalAlignment="Left" Click="Close"
-                 BorderBrush="Transparent" Margin="218,1,0,0" VerticalAlignment="Top">
+                                HorizontalAlignment="Left" Click="Close"
+                                BorderBrush="Transparent" Margin="218,1,0,0" VerticalAlignment="Top">
                             <Button.Background>
                                 <ImageBrush ImageSource="/Sources/off.png" />
                             </Button.Background>
@@ -42,6 +38,8 @@
                            Padding="0 20 0 0"
                            FontSize="18">
                 </TextBlock>
+                <Border BorderBrush="Black" BorderThickness="0.5"/>
+
                 <Grid Opacity="0.35">
                     <Image Source="/Sources/lock.png" Margin="45,45,45,10"/>
                 </Grid>
