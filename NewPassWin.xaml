@@ -14,32 +14,113 @@
 
     <Grid MouseDown="MouseDown"
               Background="#0f1f2c">
-        <Border Width="400" 
-                Height="350"
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="69*"/>
+            <ColumnDefinition Width="331*"/>
+        </Grid.ColumnDefinitions>
+        <Border
                 CornerRadius="15"
                 BorderThickness="1"
-                BorderBrush="Black"/>
-        <StackPanel>
+                BorderBrush="Black" Grid.ColumnSpan="2" Grid.RowSpan="5"/>
+        <StackPanel Grid.ColumnSpan="2">
             <Border Height="32" 
-                        VerticalAlignment="Top"
-                        BorderBrush="Transparent" 
-                        BorderThickness="0 0 0 1"
-                        CornerRadius="8 8 0 0">
+                    VerticalAlignment="Top"
+                    BorderBrush="Black" 
+                    BorderThickness="0 0 0 1"
+                    CornerRadius="8 8 0 0">
                 <Grid>
                     <Button Width="28" 
-                                Height="28" 
-                                HorizontalAlignment="Left" 
-                                Click="Back"
-                                BorderBrush="Transparent"
-                                Margin="5 3 0 0">
+                            Height="28" 
+                            HorizontalAlignment="Left" 
+                            Click="Back"
+                            BorderBrush="Transparent"
+                            Margin="5 3 0 0">
                         <Button.Background>
                             <ImageBrush ImageSource="/Sources/back.png" />
                         </Button.Background>
                     </Button>
                 </Grid>
             </Border>
-            <Border BorderBrush="Black"
-                    BorderThickness="1"/>
         </StackPanel>
+        <TextBox Grid.Row="1" Grid.ColumnSpan="2"
+                 x:Name="link"
+                 Foreground="#911e42"
+                 Padding="30 6 0 0"
+                 FontSize="15"
+                 Margin="10,7,10,7"
+                 BorderBrush="Black"
+                 BorderThickness="1">
+            <TextBox.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="Background" Value="#05141a"/>
+                    <Setter Property="CornerRadius" Value="25"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+        <Grid Grid.Row="1">
+            <Image Source="/Sources/link.png" Width="40" Margin="16 0 0 0"/>
+        </Grid>
+        <TextBox Grid.Row="2" Grid.ColumnSpan="2"
+                 x:Name="name"
+                 Foreground="#911e42"
+                 Padding="30 3 0 0"
+                 FontSize="20"
+                 Margin="10,7,10,7"
+                 Background="Transparent"
+                 BorderBrush="Black"
+                 BorderThickness="1">
+            <TextBox.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="Background" Value="#05141a"/>
+                    <Setter Property="CornerRadius" Value="25"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+        <Grid Grid.Row="2">
+            <Image Source="/Sources/login.png" Width="30" Margin="16 0 0 0"/>
+        </Grid>
+        <PasswordBox Grid.Row="3" Grid.Column="1"
+                    x:Name="pass"
+                    Foreground="#911e42"
+                    Padding="9 3 0 0"
+                    Margin="0,7,10,7"
+                    FontSize="20"
+                    Background="Transparent"
+                    BorderBrush="Black"
+                    BorderThickness="1">
+            <PasswordBox.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="Background" Value="#05141a"/>
+                    <Setter Property="CornerRadius" Value="0 25 25 0"/>
+                </Style>
+            </PasswordBox.Resources>
+        </PasswordBox>
+        <Button Grid.Row="3"
+                Content="strong"
+                Foreground="#911e42"
+                Margin="10,0,0,-1"
+                Height="55"
+                Padding="2"
+                FontSize="15"
+                BorderBrush="Black"
+                BorderThickness="1"
+                Background="Transparent" HorizontalAlignment="Left" Width="59"/>
+        <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2"
+                Background="#05141a"
+                Width="260"
+                Height="40"
+                BorderBrush="Black"
+                Foreground="#911e42"
+                FontSize="20"
+                Content="Save password"
+                Padding="0 0 0 4">
+        </Button>
     </Grid>
 </Window>
