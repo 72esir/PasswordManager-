@@ -103,6 +103,8 @@
             </PasswordBox.Resources>
         </PasswordBox>
         <Button Grid.Row="3"
+                Click="StrongPass"
+                x:Name="sPass"
                 Content="strong"
                 Foreground="#911e42"
                 Margin="10,0,0,-1"
@@ -113,6 +115,7 @@
                 BorderThickness="1"
                 Background="Transparent" HorizontalAlignment="Left" Width="59"/>
         <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2"
+                Click="Save"
                 Background="#05141a"
                 Width="260"
                 Height="40"
