@@ -86,22 +86,22 @@
         <Grid Grid.Row="2">
             <Image Source="/Sources/login.png" Width="30" Margin="16 0 0 0"/>
         </Grid>
-        <PasswordBox Grid.Row="3" Grid.Column="1"
+        <TextBox Grid.Row="3" Grid.Column="1"
                     x:Name="pass"
                     Foreground="#911e42"
-                    Padding="9 3 0 0"
+                    Padding="1 3 0 0"
                     Margin="0,7,10,7"
                     FontSize="20"
                     Background="Transparent"
                     BorderBrush="Black"
                     BorderThickness="1">
-            <PasswordBox.Resources>
+            <TextBox.Resources>
                 <Style TargetType="Border">
                     <Setter Property="Background" Value="#05141a"/>
                     <Setter Property="CornerRadius" Value="0 25 25 0"/>
                 </Style>
-            </PasswordBox.Resources>
-        </PasswordBox>
+            </TextBox.Resources>
+        </TextBox>
         <Button Grid.Row="3"
                 Click="StrongPass"
                 x:Name="sPass"

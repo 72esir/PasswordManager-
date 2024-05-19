@@ -33,7 +33,7 @@ namespace PasswordManeger
         {
             string password = "";
 
-            string[] letters = { "а", "б", "в", "г", "д", "е", "ё", "ж", "з", "и", "й", "к", "л", "м", "н", "о", "п", "р", "с", "т", "у", "ф", "х", "ц", "ч", "ш", "щ", "ъ", "ы", "ь", "э", "ю", "я", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" };
+            string[] letters = { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" };
             int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 0 };
             string[] syms = { "!","?","-","$"};
 
@@ -44,7 +44,7 @@ namespace PasswordManeger
             int ra, rb, rc;
             for (int i = 0; i < 4; i++)
             {
-                ra = a.Next(0,65);
+                ra = a.Next(0,25);
                 rb = b.Next(0,9); 
                 rc = c.Next(0,3);
                 password += letters[ra] + numbers[rb] + syms[rc];
@@ -55,7 +55,7 @@ namespace PasswordManeger
         private void StrongPass(object sender, RoutedEventArgs e)
         {
             string password = RandPass();
-            pass.Password = password;
+            pass.Text = password;
         }
 
         private void Save(object sender, RoutedEventArgs e)
