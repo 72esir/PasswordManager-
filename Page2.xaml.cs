@@ -1,36 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace PasswordManeger
 {
-    /// <summary>
-    /// Interaction logic for Page2.xaml
-    /// </summary>
     public partial class Page2 : Page
     {
-        private User currentUser;
+        private readonly User currentUser;
+
         public Page2(User user)
         {
             InitializeComponent();
             currentUser = user;
+
             using (var context = new AppContext())
             {
                 var passwords = context.PasswordEntries.Where(p => p.UserId == currentUser.Id).ToList();
-
-                // Отображаем пароли в DataGrid или другом подходящем элементе
-                dataGrid1.ItemsSource = passwords; // Замените dataGrid на имя вашего элемента
+                dataGrid1.ItemsSource = passwords;
             }
         }
 
@@ -46,14 +32,13 @@ namespace PasswordManeger
 
         private void NewPass(object sender, RoutedEventArgs e)
         {
-            var newPassWindow = new NewPassWin();
+            NewPassWin newPassWindow = new NewPassWin(currentUser);
             newPassWindow.ShowDialog();
         }
+
         private void My_pass(object sender, RoutedEventArgs e)
         {
-            
+        
         }
-
-
     }
 }

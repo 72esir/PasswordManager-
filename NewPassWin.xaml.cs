@@ -1,67 +1,74 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace PasswordManeger
 {
-    /// <summary>
-    /// Interaction logic for NewPassWin.xaml
-    /// </summary>
     public partial class NewPassWin : Window
     {
-        public NewPassWin()
+        private readonly User currentUser;
+
+        public NewPassWin(User user)
         {
             InitializeComponent();
+            currentUser = user;
         }
+
         private void MouseDown(object sender, MouseButtonEventArgs e) => DragMove();
 
         private void Back(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            Close();
         }
-        private string RandPass()
+
+        private string GenerateRandomPassword()
         {
+            const string letters = "abcdefghijklmnopqrstuvwxyz";
+            const string numbers = "1234567890";
+            const string symbols = "!?-$";
+
+            Random random = new Random();
             string password = "";
 
-            string[] letters = { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" };
-            int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 0 };
-            string[] syms = { "!","?","-","$"};
-
-            Random a = new Random();
-            Random b = new Random();
-            Random c = new Random();
-
-            int ra, rb, rc;
             for (int i = 0; i < 4; i++)
             {
-                ra = a.Next(0,25);
-                rb = b.Next(0,9); 
-                rc = c.Next(0,3);
-                password += letters[ra] + numbers[rb] + syms[rc];
+                password += letters[random.Next(letters.Length)];
+                password += numbers[random.Next(numbers.Length)];
+                password += symbols[random.Next(symbols.Length)];
             }
+
             return password;
         }
 
         private void StrongPass(object sender, RoutedEventArgs e)
         {
-            string password = RandPass();
-            pass.Text = password;
+            pass.Text = GenerateRandomPassword();
         }
 
         private void Save(object sender, RoutedEventArgs e)
         {
+            string url = link.Text.Trim();
             string login = name.Text.Trim();
-            this.Close();
+            string password = pass.Text.Trim();
+
+            using (var context = new AppContext())
+            {
+                var newPasswordEntry = new PasswordEntry
+                {
+                    UserId = currentUser.Id,
+                    Url = url,
+                    Username = login,
+                    Password = password,
+                    Comment = string.Empty,
+                    Tags = string.Empty
+                };
+
+                context.PasswordEntries.Add(newPasswordEntry);
+                context.SaveChanges();
+            }
+
+            MessageBox.Show("Password saved!");
+            Close();
         }
     }
 }

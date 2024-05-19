@@ -11,5 +11,5 @@ namespace PasswordManeger
         {
             optionsBuilder.UseSqlite("Data Source=Accounts.db");
         }
-    }   
+    }
 }

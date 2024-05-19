@@ -1,35 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
+﻿using System.Windows;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace PasswordManeger
 {
-    /// <summary>
-    /// Interaction logic for Window1.xaml
-    /// </summary>
     public partial class Window1 : Window
     {
+        private readonly User currentUser;
 
-        private User currentUser;
-
-        // Конструктор с параметром для получения пользователя
         public Window1(User user)
         {
             InitializeComponent();
             currentUser = user;
-            Fraim.Content = new Page1(currentUser); // Передаем пользователя в Page1
+            Fraim.Content = new Page1(currentUser);
         }
+
         private void MouseDown(object sender, MouseButtonEventArgs e) => DragMove();
     }
-    
 }

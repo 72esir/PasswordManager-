@@ -1,106 +1,74 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace PasswordManeger
 {
-    /// <summary>
-    /// Interaction logic for LogupPage.xaml
-    /// </summary>
     public partial class LogupPage : Page
     {
         public LogupPage()
         {
             InitializeComponent();
         }
+
         private void Continue(object sender, RoutedEventArgs e)
         {
             string login = Log.Text.Trim();
             string pass = Pass.Password.Trim();
             string rePass = RePass.Password.Trim();
 
-            if ((pass.Length < 7 || (!pass.Contains("?") && !pass.Contains("!") && !pass.Contains("*") && !pass.Contains("#"))) && (pass == rePass) && (login.Length >= 5))
+            // Валидация пароля и логина
+            if (IsPasswordInvalid(pass) && pass == rePass && login.Length >= 5)
             {
-                Pass.ToolTip = "the password is too short or does not contain special characters (?,!,*) ";
-                Pass.Background = Brushes.LightCoral;
+                SetErrorToolTip(Pass, "Password is too short or does not contain special characters (?,!,*,#).");
             }
-            else if ((pass.Length < 7 || (!pass.Contains("?") && !pass.Contains("!") && !pass.Contains("*") && !pass.Contains("#"))) && (pass == rePass) && (login.Length < 5))
+            else if (IsPasswordInvalid(pass) && pass == rePass && login.Length < 5)
             {
-                Pass.ToolTip = "the password is too short or does not contain special characters (?,!,*)";
-                Log.ToolTip = "login is too short";
-
-                Pass.Background = Brushes.LightCoral;
-                Log.Background = Brushes.LightCoral;
+                SetErrorToolTip(Pass, "Password is too short or does not contain special characters (?,!,*,#).");
+                SetErrorToolTip(Log, "Login is too short.");
             }
-            else if ((pass.Length < 7 || (!pass.Contains("?") && !pass.Contains("!") && !pass.Contains("*") && !pass.Contains("#"))) && (pass != rePass) && (login.Length >= 5))
+            else if (IsPasswordInvalid(pass) && pass != rePass && login.Length >= 5)
             {
-                Pass.ToolTip = "the password is too short or does not contain special characters (?,!,*)";
-                RePass.ToolTip = "retry the password";
-
-                Pass.Background = Brushes.LightCoral;
-                RePass.Background = Brushes.LightCoral;
+                SetErrorToolTip(Pass, "Password is too short or does not contain special characters (?,!,*,#).");
+                SetErrorToolTip(RePass, "Retry the password.");
             }
-
-
-            else if ((pass != rePass) && (pass.Length >= 7 && (pass.Contains("?") || pass.Contains("!") || pass.Contains("*") || !pass.Contains("#"))) && login.Length >= 5)
+            else if (pass != rePass && !IsPasswordInvalid(pass) && login.Length >= 5)
             {
-                RePass.ToolTip = "retry the password";
-                RePass.Background = Brushes.LightCoral;
+                SetErrorToolTip(RePass, "Retry the password.");
             }
-            else if ((pass != rePass) && (pass.Length >= 7 && (pass.Contains("?") || pass.Contains("!") || pass.Contains("*") || !pass.Contains("#"))) && login.Length < 5)
+            else if (pass != rePass && !IsPasswordInvalid(pass) && login.Length < 5)
             {
-                RePass.ToolTip = "field is entered incorrectly";
-                RePass.Background = Brushes.LightCoral;
-
-                Log.ToolTip = "login is too short";
-                Log.Background = Brushes.LightCoral;
+                SetErrorToolTip(RePass, "Field is entered incorrectly.");
+                SetErrorToolTip(Log, "Login is too short.");
             }
-
-
-            else if (login.Length < 5 && (pass.Length >= 7 && (pass.Contains("?") || pass.Contains("!") || pass.Contains("*") || pass.Contains("#"))) && (pass == rePass))
+            else if (login.Length < 5 && !IsPasswordInvalid(pass) && pass == rePass)
             {
-                Log.ToolTip = "login is too short";
-                Log.Background = Brushes.LightCoral;
+                SetErrorToolTip(Log, "Login is too short.");
             }
             else
             {
                 User newUser = SaveAccToDatabase(login, pass);
-                
-                RePass.ToolTip = "";
-                RePass.Background = Brushes.Transparent;
-                Pass.ToolTip = "";
-                Pass.Background = Brushes.Transparent;
-                Log.ToolTip = "";
-                Log.Background = Brushes.Transparent;
+
+                ClearErrorToolTips();
 
                 Window1 win1 = new Window1(newUser);
                 win1.Show();
 
-                Window currentWindow = Application.Current.MainWindow;
-                currentWindow.Close();
+                Application.Current.MainWindow.Close();
             }
         }
-        private User SaveAccToDatabase(string login,string pass)
+
+        private User SaveAccToDatabase(string login, string pass)
         {
             using (var context = new AppContext())
             {
                 var newUser = new User { Login = login, Password = pass };
                 context.Users.Add(newUser);
                 context.SaveChanges();
-                return newUser; // Возвращаем созданного пользователя
+                return newUser;
             }
         }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new StartPage());
@@ -109,6 +77,38 @@ namespace PasswordManeger
         private void Close(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
+        }
+
+        // Вспомогательные методы для проверки и вывода ошибок
+        private bool IsPasswordInvalid(string password)
+        {
+            return password.Length < 7 ||
+                   (!password.Contains("?") &&
+                    !password.Contains("!") &&
+                    !password.Contains("*") &&
+                    !password.Contains("#"));
+        }
+
+        private void SetErrorToolTip(PasswordBox passwordBox, string message)
+        {
+            passwordBox.ToolTip = message;
+            passwordBox.Background = Brushes.LightCoral;
+        }
+
+        private void SetErrorToolTip(TextBox textBox, string message)
+        {
+            textBox.ToolTip = message;
+            textBox.Background = Brushes.LightCoral;
+        }
+
+        private void ClearErrorToolTips()
+        {
+            RePass.ToolTip = "";
+            RePass.Background = Brushes.Transparent;
+            Pass.ToolTip = "";
+            Pass.Background = Brushes.Transparent;
+            Log.ToolTip = "";
+            Log.Background = Brushes.Transparent;
         }
     }
 }
