@@ -1,6 +1,4 @@
-﻿using System;
-using System.Runtime.InteropServices;
-using System.Security;
+﻿using System.Runtime.InteropServices;
 using System.Windows.Controls;
 
 public static class SecurePasswordHelper

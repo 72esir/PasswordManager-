@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
 
 namespace PasswordManeger
@@ -38,7 +37,7 @@ namespace PasswordManeger
 
         private void My_pass(object sender, RoutedEventArgs e)
         {
-        
+            NavigationService.Navigate(new Page2(currentUser));
         }
     }
 }
