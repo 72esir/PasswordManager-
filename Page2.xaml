@@ -25,6 +25,12 @@
                     BorderBrush="Black" BorderThickness="0 0 0 1"
                     CornerRadius="8 8 0 0">
                 <Grid>
+                    <TextBlock Text="ALMA" 
+                               Foreground="#911e42" 
+                               FontSize="20"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"
+                               FontFamily="Segoe UI Black"/>
                     <Button Width="28" Height="28" HorizontalAlignment="Right" Click="Close"
                         BorderBrush="Transparent">
                         <Button.Background>

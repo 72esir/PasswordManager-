@@ -13,49 +13,53 @@ namespace PasswordManeger
 
         private void Continue(object sender, RoutedEventArgs e)
         {
+            // 2. Получение данных из полей ввода
             string login = Log.Text.Trim();
             string pass = Pass.Password.Trim();
             string rePass = RePass.Password.Trim();
 
-            // Валидация пароля и логина
-            if (IsPasswordInvalid(pass) && pass == rePass && login.Length >= 5)
+            // 3. Валидация
+            bool isValid = true;
+
+            if (login.Length < 5)
             {
-                SetErrorToolTip(Pass, "Password is too short or does not contain special characters (?,!,*,#).");
+                SetErrorToolTip("Login must be at least 5 characters long.");
+                isValid = false;
             }
-            else if (IsPasswordInvalid(pass) && pass == rePass && login.Length < 5)
+
+            if (pass.Length < 7 || !ContainsSpecialCharacter(pass))
             {
-                SetErrorToolTip(Pass, "Password is too short or does not contain special characters (?,!,*,#).");
-                SetErrorToolTip(Log, "Login is too short.");
+                SetErrorToolTip("Password must be at least 7 characters long and contain at least one special character (?,!,*,#).");
+                isValid = false;
             }
-            else if (IsPasswordInvalid(pass) && pass != rePass && login.Length >= 5)
+
+            if (pass != rePass)
             {
-                SetErrorToolTip(Pass, "Password is too short or does not contain special characters (?,!,*,#).");
-                SetErrorToolTip(RePass, "Retry the password.");
+                SetErrorToolTip("Passwords do not match.");
+                isValid = false;
             }
-            else if (pass != rePass && !IsPasswordInvalid(pass) && login.Length >= 5)
-            {
-                SetErrorToolTip(RePass, "Retry the password.");
-            }
-            else if (pass != rePass && !IsPasswordInvalid(pass) && login.Length < 5)
-            {
-                SetErrorToolTip(RePass, "Field is entered incorrectly.");
-                SetErrorToolTip(Log, "Login is too short.");
-            }
-            else if (login.Length < 5 && !IsPasswordInvalid(pass) && pass == rePass)
-            {
-                SetErrorToolTip(Log, "Login is too short.");
-            }
-            else
+
+            // 4. Сохранение пользователя, если все данные валидны
+            if (isValid)
             {
                 User newUser = SaveAccToDatabase(login, pass);
-
-                ClearErrorToolTips();
 
                 Window1 win1 = new Window1(newUser);
                 win1.Show();
 
                 Application.Current.MainWindow.Close();
             }
+        }
+        private bool ContainsSpecialCharacter(string text)
+        {
+            foreach (char c in text)
+            {
+                if ("?!*#".Contains(c))
+                {
+                    return true;
+                }
+            }
+            return false;
         }
 
         private User SaveAccToDatabase(string login, string pass)
@@ -77,38 +81,11 @@ namespace PasswordManeger
         private void Close(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
-        }
+        }       
 
-        // Вспомогательные методы для проверки и вывода ошибок
-        private bool IsPasswordInvalid(string password)
+        private void SetErrorToolTip(string message)
         {
-            return password.Length < 7 ||
-                   (!password.Contains("?") &&
-                    !password.Contains("!") &&
-                    !password.Contains("*") &&
-                    !password.Contains("#"));
-        }
-
-        private void SetErrorToolTip(PasswordBox passwordBox, string message)
-        {
-            passwordBox.ToolTip = message;
-            passwordBox.Background = Brushes.LightCoral;
-        }
-
-        private void SetErrorToolTip(TextBox textBox, string message)
-        {
-            textBox.ToolTip = message;
-            textBox.Background = Brushes.LightCoral;
-        }
-
-        private void ClearErrorToolTips()
-        {
-            RePass.ToolTip = "";
-            RePass.Background = Brushes.Transparent;
-            Pass.ToolTip = "";
-            Pass.Background = Brushes.Transparent;
-            Log.ToolTip = "";
-            Log.Background = Brushes.Transparent;
+            MessageBox.Show(message);
         }
     }
 }

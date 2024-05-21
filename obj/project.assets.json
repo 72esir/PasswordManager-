@@ -1274,19 +1274,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\dreea\\.nuget\\packages\\": {}
+    "C:\\Users\\asala\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dreea\\Desktop\\Проект\\Projectpass\\PasswordManager-\\PasswordManager.csproj",
+      "projectUniqueName": "C:\\Users\\asala\\OneDrive\\Рабочий стол\\прога\\PasswordManager\\PasswordManager.csproj",
       "projectName": "PasswordManager",
-      "projectPath": "C:\\Users\\dreea\\Desktop\\Проект\\Projectpass\\PasswordManager-\\PasswordManager.csproj",
-      "packagesPath": "C:\\Users\\dreea\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dreea\\Desktop\\Проект\\Projectpass\\PasswordManager-\\obj\\",
+      "projectPath": "C:\\Users\\asala\\OneDrive\\Рабочий стол\\прога\\PasswordManager\\PasswordManager.csproj",
+      "packagesPath": "C:\\Users\\asala\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\asala\\OneDrive\\Рабочий стол\\прога\\PasswordManager\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\dreea\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\asala\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1306,11 +1306,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -1345,7 +1340,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
